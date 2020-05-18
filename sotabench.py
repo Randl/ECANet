@@ -138,7 +138,7 @@ ImageNet.benchmark(
 )
 torch.cuda.empty_cache()
 
-# Model 6
+# Model 5
 file_id = '1_bYnaOg9ptsILC_iC7uQ5Izv-u2rjYG5'
 destination = './tmp/'
 filename = 'eca_resnet152_k3357.pth.tar'
@@ -155,7 +155,7 @@ input_transform = transforms.Compose([
     transforms.ToTensor(),
     normalize,
 ])
-model = models.__dict__['eca_resnet101'](k_size=[3, 3, 5, 7])
+model = models.__dict__['eca_resnet152'](k_size=[3, 3, 5, 7])
 model.load_state_dict(sd)
 
 # Run the benchmark
